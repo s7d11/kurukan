@@ -76,7 +76,7 @@ footer{margin-top:48px;color:var(--muted);font-size:14px}
   <div class="card">
     <h3>macOS</h3>
     <p>Apple Silicon (M1 or later) · macOS 12+</p>
-    <a class="dl off" href="#mac" id="mac-dl"><b>App (.zip)</b><span>coming soon</span></a>
+    <a class="dl" href="https://github.com/s7d11/kurukan/releases/download/fuga/SebeniStudio-fuga-mac-arm64.zip"><b>App + installer (.zip)</b><span>250 MB</span></a>
   </div>
 </div>
 <p class="sub" style="margin-top:10px">All files are on the <a href="https://github.com/s7d11/kurukan/releases/tag/fuga">fuga release page</a>, with <a href="https://github.com/s7d11/kurukan/releases/download/fuga/SHA256SUMS.txt">SHA256SUMS.txt</a> to check your download.</p>
@@ -131,18 +131,35 @@ footer{margin-top:48px;color:var(--muted);font-size:14px}
 </section>
 
 <section class="panel" id="p-mac" role="tabpanel">
-  <div class="note" id="mac-pending"><b>The macOS build isn’t published yet.</b> These steps will apply when it is.</div>
+  <p>Needs a Mac with Apple Silicon (M1 or later; Apple menu → About This Mac shows “Chip: Apple M…”). You do this once per test build. After that, Sebeni Studio opens from Launchpad and the Dock like any other app.</p>
   <ol>
-    <li>Download <code>SebeniStudio-fuga-mac-arm64.zip</code> and double-click it to unzip.</li>
-    <li>Drag <b>Sebeni Studio</b> into your <b>Applications</b> folder.</li>
-    <li>The first time, <b>right-click</b> (or Control-click) the app and choose <b>Open</b>, then <b>Open</b> again. Test builds are not notarized by Apple, so a normal double-click is refused the first time.</li>
-    <li>On macOS 15 and later, if there is no Open button: try to open the app once, then go to System Settings → Privacy &amp; Security and click <b>Open Anyway</b>.</li>
+    <li>Download <code>SebeniStudio-fuga-mac-arm64.zip</code>. Safari unzips it for you; otherwise double-click it. You get a folder <b>Sebeni Studio fuga</b> with three things in it:
+      <ul>
+        <li><b>Install Sebeni Studio.command</b>, the installer;</li>
+        <li><b>Sebeni Studio.app</b>;</li>
+        <li><b>READ ME FIRST.txt</b>, these steps in short.</li>
+      </ul></li>
+    <li><b>Right-click</b> (or Control-click) <b>Install Sebeni Studio.command</b> and choose <b>Open</b>. If macOS asks again, click <b>Open</b>.
+      <div class="note"><b>macOS 15 (Sequoia) or later, with no Open button:</b> click <b>Done</b>, open the Apple menu → System Settings → <b>Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b> next to “Install Sebeni Studio.command”. Confirm with your password or Touch ID.</div></li>
+    <li>A Terminal window shows the progress for a few seconds. The installer:
+      <ul>
+        <li>copies Sebeni Studio into <b>Applications</b>;</li>
+        <li>prepares it to open (see below);</li>
+        <li>starts it and tells you when it’s done.</li>
+      </ul>
+      You can then close Terminal and delete the downloaded folder.</li>
+    <li>From now on, open <b>Sebeni Studio</b> from Launchpad, Spotlight (⌘ Space, type “Sebeni”) or Applications. Right-click its Dock icon → Options → <b>Keep in Dock</b> to pin it.</li>
   </ol>
-  <div class="note"><b>If macOS says the app “is damaged”:</b> this is the download quarantine, not a broken file. In Terminal run:
-    <pre><code>xattr -cr "/Applications/Sebeni Studio.app"</code></pre>
-    and open it again.
-  </div>
-  <p>Intel Macs are not supported in this build. Remove: drag the app from Applications to the Bin.</p>
+  <div class="note ok"><b>What the installer does, and doesn’t.</b> Test builds aren’t notarized by Apple yet. The installer only removes the download quarantine (<code>xattr</code>) and signs the app locally (<code>codesign</code>), with tools that come with macOS. It installs nothing else: no Homebrew, no Xcode, no system Python. The app keeps its own Python and models in <code>~/Library/Application Support/Sebeni Studio</code>, so it can’t conflict with Python, conda or Homebrew setups you already have.</div>
+  <h3>If something goes wrong</h3>
+  <ul>
+    <li><b>“Sebeni Studio is damaged and can’t be opened”</b>: the app was opened directly instead of through the installer. Run the installer (step 2). Or, in Terminal:
+      <pre><code>xattr -cr "/Applications/Sebeni Studio.app"
+codesign --force --deep --sign - "/Applications/Sebeni Studio.app"</code></pre></li>
+    <li><b>“needs a Mac with Apple Silicon”</b>: Intel Macs aren’t supported in this build.</li>
+    <li><b>Installing a newer test build</b>: run its installer. It closes the old version and replaces it, and your projects and settings stay.</li>
+  </ul>
+  <p>Remove: quit the app and drag it from Applications to the Bin. To also remove its data, delete <code>~/Library/Application Support/Sebeni Studio</code>.</p>
 </section>
 
 <h2 id="first">First launch</h2>
@@ -155,6 +172,7 @@ footer{margin-top:48px;color:var(--muted);font-size:14px}
   <li><b>Keys:</b> an NVIDIA API key turns on the main model (Nemotron), which powers the Assistant, Jeliba stories and the project architect. Without it the app still works with the dictionary, key map and guide, and gives offline answers.</li>
   <li><b>Theme:</b> light or dark.</li>
 </ol>
+<div class="note ok">The app is self-contained on every system. When you turn on the local language engines (DabaX, the Sebeni model), it downloads its own private Python into its data folder. It never uses or changes a Python, conda or Homebrew setup you already have.</div>
 <div class="note ok">Keys are stored encrypted by your system (Windows DPAPI, macOS Keychain, Linux Secret Service) and never leave the app except to call the service they belong to.</div>
 
 <h2 id="test">What to try</h2>
@@ -206,7 +224,6 @@ tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.p)));
 // Open the tab for the visitor's system.
 const ua = navigator.userAgent;
 show(/Mac/.test(ua) ? 'mac' : /Linux|X11/.test(ua) && !/Android/.test(ua) ? 'linux' : 'win');
-document.getElementById('mac-dl').addEventListener('click', () => show('mac'));
 </script>
 </body>
 </html>
