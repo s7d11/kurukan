@@ -1,4 +1,212 @@
-<!doctype html><meta charset="utf-8"><title>Sɛbɛni Studio — full test</title>
-<style>body{font:15px/1.5 system-ui,sans-serif;margin:24px auto;max-width:1200px;padding:0 16px;color:#1c1b1b;background:#fcf9f8}h1{margin:0 0 4px}video{width:100%;border-radius:12px;background:#000;margin:12px 0}table{border-collapse:collapse;width:100%}td{padding:6px 8px;border-bottom:1px solid #e5e2e1;vertical-align:top}tr.bad{background:#ffdad6}tr.skip{color:#857371}.d{font-size:12px;color:#534342;word-break:break-word}.s{font-size:12px;color:#857371;width:30%}figure{display:inline-block;width:32%;margin:0 1% 12px 0;vertical-align:top}figure img{width:100%;border-radius:8px;border:1px solid #e5e2e1}figcaption{font-size:12px;color:#857371}</style>
-<h1>Sɛbɛni Studio — full test</h1><p>11/26/2026, 3:19:41 PM · dev build · <b>57/57 passed</b> · 10:58</p>
-<video controls src="sebeni-full-test.mp4"></video><h2>Checks</h2><table><tr class="ok"><td>✓</td><td>0:03</td><td>0 setup switches the interface language (not the pivot)<div class="d">Bienvenue dans Sɛbɛni Studio</div></td><td class="s">First run: loading screen, then setup (interface language, languages, keyboard, Sebeni model list)</td></tr><tr class="ok"><td>✓</td><td>0:03</td><td>0 setup keyboard demo types ɛ<div class="d"></div></td><td class="s">First run: loading screen, then setup (interface language, languages, keyboard, Sebeni model list)</td></tr><tr class="ok"><td>✓</td><td>0:04</td><td>0 setup lists the mlsftwrs Sebeni models<div class="d">mlsftwrs/sebeni-gemma-4-e2b-grpo-50 · adapter · 28 ↓ | mlsftwrs/sebeni-gemma-4-e2b-apo-50 · adapter · 0 ↓ · private | mlsftwrs/sebeni-gemma-4-e2b-dpo-50 · adapter · 0 ↓ · private</div></td><td class="s">First run: loading screen, then setup (interface language, languages, keyboard, Sebeni model list)</td></tr><tr class="ok"><td>✓</td><td>0:07</td><td>real DabaX engine up (py-sidecar)<div class="d">0.0 s · DabaX+SEmbedtuneDabaX · SEmbed stand-in · Sebeni rulesmenu_bookBambara</div></td><td class="s">Guide engines: DabaX parser and SEmbed search</td></tr><tr class="ok"><td>✓</td><td>0:16</td><td>real SEmbedv1 index (onnxruntime-node)<div class="d"></div></td><td class="s">Guide engines: DabaX parser and SEmbed search</td></tr><tr class="ok"><td>✓</td><td>0:21</td><td>1 intake turn guided, English not marked<div class="d">Interactive Story World</div></td><td class="s">Start screen: the project architect, then a workspace from a preset</td></tr><tr class="ok"><td>✓</td><td>0:24</td><td>1 project scaffolded on disk<div class="d"></div></td><td class="s">Start screen: the project architect, then a workspace from a preset</td></tr><tr class="ok"><td>✓</td><td>0:25</td><td>1 first document is "Document 1"<div class="d"></div></td><td class="s">Start screen: the project architect, then a workspace from a preset</td></tr><tr class="ok"><td>✓</td><td>0:26</td><td>dock: closing every tab shows the Start page<div class="d"></div></td><td class="s">Panes: close everything (Start page), drag a tab to split, resize, close and reopen the Assistant</td></tr><tr class="ok"><td>✓</td><td>0:32</td><td>dock: drag a tab to the right edge splits the area<div class="d">3 → 4 groups</div></td><td class="s">Panes: close everything (Start page), drag a tab to split, resize, close and reopen the Assistant</td></tr><tr class="ok"><td>✓</td><td>0:33</td><td>dock: dragging a divider resizes panes<div class="d"></div></td><td class="s">Panes: close everything (Start page), drag a tab to split, resize, close and reopen the Assistant</td></tr><tr class="ok"><td>✓</td><td>0:33</td><td>dock: Assistant closes and reopens<div class="d"></div></td><td class="s">Panes: close everything (Start page), drag a tab to split, resize, close and reopen the Assistant</td></tr><tr class="ok"><td>✓</td><td>0:35</td><td>ui language: a bam→fra project shows an English interface<div class="d"></div></td><td class="s">Panes: close everything (Start page), drag a tab to split, resize, close and reopen the Assistant</td></tr><tr class="ok"><td>✓</td><td>0:37</td><td>2 close form kept (sebenni → sɛbɛnni)<div class="d"></div></td><td class="s">Writing: a marked word, then keep the suggested spelling</td></tr><tr class="ok"><td>✓</td><td>0:38</td><td>3 Assistant is about the open item<div class="d"></div></td><td class="s">Assistant: ask about the selection, keep the answer on the document</td></tr><tr class="ok"><td>✓</td><td>0:43</td><td>3 kept reply written onto the document<div class="d"></div></td><td class="s">Assistant: ask about the selection, keep the answer on the document</td></tr><tr class="ok"><td>✓</td><td>0:45</td><td>editor: bold wraps the selection<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:45</td><td>editor: preview renders Markdown<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:46</td><td>key map: se;be;nni types sɛbɛnni<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:47</td><td>key map: n;; cycles to ŋ<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:47</td><td>normalization: pasting bεna (Greek ε) gives bɛna<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:49</td><td>editor: export .md<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:49</td><td>editor: import .md round trip<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:52</td><td>editor: export .docx<div class="d"></div></td><td class="s">Editor: bold, preview, keyboard map (e; → ɛ), paste normalization, import and export</td></tr><tr class="ok"><td>✓</td><td>0:55</td><td>4 Alt+click opens the word in the Lookup panel; editor width unchanged<div class="d"></div></td><td class="s">Dictionary: Alt+click a word opens Lookup in the side panel; add a project word; export .dict</td></tr><tr class="ok"><td>✓</td><td>0:56</td><td>4 dictionary from the sebenml baseline (beni baseline.dict), entry with senses<div class="d">bamadaba 0.5.4 · 13,529 entries · 0 project  · sɛ́bɛnShipped guide accepted Save Add to projectn écrit; lettre; texte impriméà </div></td><td class="s">Dictionary: Alt+click a word opens Lookup in the side panel; add a project word; export .dict</td></tr><tr class="ok"><td>✓</td><td>1:01</td><td>4 project word added beside shipped dictionary (MDF fields)<div class="d"></div></td><td class="s">Dictionary: Alt+click a word opens Lookup in the side panel; add a project word; export .dict</td></tr><tr class="ok"><td>✓</td><td>1:02</td><td>4 project dictionary exports as Toolbox/MDF<div class="d"></div></td><td class="s">Dictionary: Alt+click a word opens Lookup in the side panel; add a project word; export .dict</td></tr><tr class="ok"><td>✓</td><td>1:03</td><td>4 project entry listed first in the lexicon<div class="d"></div></td><td class="s">Dictionary: Alt+click a word opens Lookup in the side panel; add a project word; export .dict</td></tr><tr class="ok"><td>✓</td><td>1:08</td><td>5 annotation step accepted<div class="d"></div></td><td class="s">Annotation: suggest, accept, update and clear a step; IGT pre-filled by DabaX; rename and delete</td></tr><tr class="ok"><td>✓</td><td>1:08</td><td>5 annotation segment rows never overlap<div class="d">168-202 204-238 240-274</div></td><td class="s">Annotation: suggest, accept, update and clear a step; IGT pre-filled by DabaX; rename and delete</td></tr><tr class="ok"><td>✓</td><td>1:10</td><td>5 an accepted step can be updated and cleared<div class="d"></div></td><td class="s">Annotation: suggest, accept, update and clear a step; IGT pre-filled by DabaX; rename and delete</td></tr><tr class="ok"><td>✓</td><td>1:11</td><td>5 empty task list refused<div class="d"></div></td><td class="s">Annotation: suggest, accept, update and clear a step; IGT pre-filled by DabaX; rename and delete</td></tr><tr class="ok"><td>✓</td><td>1:13</td><td>5 IGT pre-filled<div class="d">hádamàden | bɛ́ɛ | bɛ | bánge | hɔ́rɔnya | lá | bɛ́ɛ | ka | kàn | dànbe | ni | jósi · pre-filled by DabaX</div></td><td class="s">Annotation: suggest, accept, update and clear a step; IGT pre-filled by DabaX; rename and delete</td></tr><tr class="ok"><td>✓</td><td>1:15</td><td>5 annotation project can be renamed and deleted<div class="d"></div></td><td class="s">Annotation: suggest, accept, update and clear a step; IGT pre-filled by DabaX; rename and delete</td></tr><tr class="ok"><td>✓</td><td>1:22</td><td>6 script turn → nodes; flow connect<div class="d">4 nodes</div></td><td class="s">Jeliba: a story turn in the Script view, then the Flow graph</td></tr><tr class="ok"><td>✓</td><td>1:29</td><td>jeliba foundation asked before drafting (place · time · person · cast · want)<div class="d">dugu, kolon kɛrɛ la | night | Sali, jeli</div></td><td class="s">Jeliba: story foundation questions, Begin, choices, commands, Export</td></tr><tr class="ok"><td>✓</td><td>1:32</td><td>jeliba Begin opens a scene with numbered choices<div class="d">3 choices</div></td><td class="s">Jeliba: story foundation questions, Begin, choices, commands, Export</td></tr><tr class="ok"><td>✓</td><td>1:35</td><td>jeliba commands answer locally<div class="d"></div></td><td class="s">Jeliba: story foundation questions, Begin, choices, commands, Export</td></tr><tr class="ok"><td>✓</td><td>1:35</td><td>jeliba "/" opens the command menu<div class="d"></div></td><td class="s">Jeliba: story foundation questions, Begin, choices, commands, Export</td></tr><tr class="ok"><td>✓</td><td>1:37</td><td>jeliba EXPORT makes "Document N"<div class="d"></div></td><td class="s">Jeliba: story foundation questions, Begin, choices, commands, Export</td></tr><tr class="ok"><td>✓</td><td>1:45</td><td>jeliba cast became 3D characters in the story world<div class="d">Sali, griot, Musa, griot</div></td><td class="s">Stage: the cast in 3D; /add well, /move Sali to well, /wave Musa — written into the script</td></tr><tr class="ok"><td>✓</td><td>1:59</td><td>stage commands act on the story and are written into the script<div class="d"> í cɛ́sirijala dón, í tɛ́ sé k'à bìla kɛ̀rɛ fɛ̀. | Sú fɛ̀, à b'í dá. | (A well.) | (Sali walks to well.) | (Musa waves.)</div></td><td class="s">Stage: the cast in 3D; /add well, /move Sali to well, /wave Musa — written into the script</td></tr><tr class="ok"><td>✓</td><td>2:38</td><td>7 playground: select, move (x,y,z) via inspector, orbit keeps selection, save view, undo/redo<div class="d"></div></td><td class="s">World Studio: character, scene, move a prop (x, y, z), orchestrator proposal, story export</td></tr><tr class="ok"><td>✓</td><td>2:56</td><td>7 orchestrator character accepted<div class="d">2 characters (1 designed by hand + 1 from the orchestrator)</div></td><td class="s">World Studio: character, scene, move a prop (x, y, z), orchestrator proposal, story export</td></tr><tr class="ok"><td>✓</td><td>3:04</td><td>7 unfinished world line held for the 3 actions<div class="d"></div></td><td class="s">World Studio: character, scene, move a prop (x, y, z), orchestrator proposal, story export</td></tr><tr class="ok"><td>✓</td><td>3:12</td><td>7 story package exported<div class="d">index.html, player.js, story.js, story.mjs, assets.js, LICENSES.txt</div></td><td class="s">World Studio: character, scene, move a prop (x, y, z), orchestrator proposal, story export</td></tr><tr class="ok"><td>✓</td><td>3:12</td><td>7 export carries the playground placement and camera<div class="d">fire (3.5, 0.5, -2.2) · camera -8.38,7.01,-1.97</div></td><td class="s">World Studio: character, scene, move a prop (x, y, z), orchestrator proposal, story export</td></tr><tr class="ok"><td>✓</td><td>3:22</td><td>7 exported player opens from file:// and advances<div class="d">1 / 6 → 2 / 6</div></td><td class="s">World Studio: character, scene, move a prop (x, y, z), orchestrator proposal, story export</td></tr><tr class="ok"><td>✓</td><td>3:27</td><td>9 engines panel lists roles and engines<div class="d"></div></td><td class="s">Settings: engines and roles</td></tr><tr class="ok"><td>✓</td><td>3:28</td><td>defaults: Sebeni = sebeni-smollm2-135-sft-100 (auto-downloaded with the HF token); main = Nemotron Super VL when a key exists<div class="d">{"generator":{"engine":"stub"},"sebeni":{"engine":"py-sidecar","model":"mlsftwrs_sebeni-smollm2-135-sft-100"},"coder":{"engine":"same-as-generator"}}</div></td><td class="s">Default models: Nemotron Super VL (main) and the SmolLM2 Sebeni adapter</td></tr><tr class="ok"><td>✓</td><td>3:31</td><td>model library lists mlsftwrs models and inspects one<div class="d">35 models (34 private) · 42.9 MB to download · + google/gemma-4-E2B on first usedownl</div></td><td class="s">Model library: browse mlsftwrs models, inspect, download a private model, use it</td></tr><tr class="ok"><td>✓</td><td>3:39</td><td>model library downloads a private mlsftwrs model with the HF token (download only)<div class="d">/tmp/sebeni-e2e-QJEJGi/user/models/mlsftwrs_sebeni-qwen3-0.6b-sft-50</div></td><td class="s">Model library: browse mlsftwrs models, inspect, download a private model, use it</td></tr><tr class="ok"><td>✓</td><td>3:40</td><td>model library: Use binds the downloaded model<div class="d"></div></td><td class="s">Model library: browse mlsftwrs models, inspect, download a private model, use it</td></tr><tr class="ok"><td>✓</td><td>10:20</td><td>8 restart restores project, layout and item<div class="d"></div></td><td class="s">Restart: the project, layout and open item come back; close the project</td></tr><tr class="ok"><td>✓</td><td>10:21</td><td>8 close project → landing<div class="d"></div></td><td class="s">Restart: the project, layout and open item come back; close the project</td></tr><tr class="ok"><td>✓</td><td>10:22</td><td>no console errors<div class="d"></div></td><td class="s">Restart: the project, layout and open item come back; close the project</td></tr></table><h2>Screenshots</h2><figure><img src="screenshots/00-onboarding.png" loading="lazy"><figcaption>00-onboarding.png</figcaption></figure><figure><img src="screenshots/00b-onboarding-model.png" loading="lazy"><figcaption>00b-onboarding-model.png</figcaption></figure><figure><img src="screenshots/00c-landing.png" loading="lazy"><figcaption>00c-landing.png</figcaption></figure><figure><img src="screenshots/01-document.png" loading="lazy"><figcaption>01-document.png</figcaption></figure><figure><img src="screenshots/01a-start-page.png" loading="lazy"><figcaption>01a-start-page.png</figcaption></figure><figure><img src="screenshots/01b-docking.png" loading="lazy"><figcaption>01b-docking.png</figcaption></figure><figure><img src="screenshots/02-popover.png" loading="lazy"><figcaption>02-popover.png</figcaption></figure><figure><img src="screenshots/03-assistant.png" loading="lazy"><figcaption>03-assistant.png</figcaption></figure><figure><img src="screenshots/03b-editor.png" loading="lazy"><figcaption>03b-editor.png</figcaption></figure><figure><img src="screenshots/04-lookup.png" loading="lazy"><figcaption>04-lookup.png</figcaption></figure><figure><img src="screenshots/05-annotation.png" loading="lazy"><figcaption>05-annotation.png</figcaption></figure><figure><img src="screenshots/05-igt.png" loading="lazy"><figcaption>05-igt.png</figcaption></figure><figure><img src="screenshots/06-chat.png" loading="lazy"><figcaption>06-chat.png</figcaption></figure><figure><img src="screenshots/06-flow.png" loading="lazy"><figcaption>06-flow.png</figcaption></figure><figure><img src="screenshots/06a-foundation.png" loading="lazy"><figcaption>06a-foundation.png</figcaption></figure><figure><img src="screenshots/06b-jeliba.png" loading="lazy"><figcaption>06b-jeliba.png</figcaption></figure><figure><img src="screenshots/06c-stage-commands.png" loading="lazy"><figcaption>06c-stage-commands.png</figcaption></figure><figure><img src="screenshots/07-world-preview.png" loading="lazy"><figcaption>07-world-preview.png</figcaption></figure><figure><img src="screenshots/07-world.png" loading="lazy"><figcaption>07-world.png</figcaption></figure><figure><img src="screenshots/07a-playground.png" loading="lazy"><figcaption>07a-playground.png</figcaption></figure><figure><img src="screenshots/08-exported-player.png" loading="lazy"><figcaption>08-exported-player.png</figcaption></figure><figure><img src="screenshots/09-settings-engines.png" loading="lazy"><figcaption>09-settings-engines.png</figcaption></figure><figure><img src="screenshots/09b-model-library.png" loading="lazy"><figcaption>09b-model-library.png</figcaption></figure><figure><img src="screenshots/10-landing-after.png" loading="lazy"><figcaption>10-landing-after.png</figcaption></figure>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sɛbɛni Studio · fuga</title>
+<meta name="description" content="Sɛbɛni Studio test build “fuga” (0.3.0-fuga): downloads and install guides for Windows, macOS and Ubuntu/Debian.">
+<link rel="icon" href="icon.png">
+<style>
+:root{--bg:#fcf9f8;--surface:#fff;--text:#1c1b1b;--muted:#5f5150;--line:#e7e0df;--brand:#ab4444;--brand-soft:#ffdad6;--code:#f4efee;--ok:#2e6b3a;--warn:#8a5a00}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141212;--surface:#1d1b1b;--text:#ede0de;--muted:#b9a9a7;--line:#3a3332;--brand:#ffb3ad;--brand-soft:#5c1f1f;--code:#2a2524;--ok:#8fd19e;--warn:#f0c060}}
+:root[data-theme="dark"]{--bg:#141212;--surface:#1d1b1b;--text:#ede0de;--muted:#b9a9a7;--line:#3a3332;--brand:#ffb3ad;--brand-soft:#5c1f1f;--code:#2a2524;--ok:#8fd19e;--warn:#f0c060}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 16px 64px}
+header{display:flex;gap:18px;align-items:center;margin-bottom:8px}
+header img{width:72px;height:72px;flex:none}
+h1{font-size:30px;line-height:1.2;margin:0}
+h2{font-size:22px;margin:40px 0 10px}
+h3{font-size:17px;margin:22px 0 6px}
+.sub{color:var(--muted);margin:2px 0 0}
+.tag{display:inline-block;background:var(--brand-soft);color:var(--brand);border-radius:999px;padding:1px 10px;font-size:13px;font-weight:600;vertical-align:middle}
+a{color:var(--brand)}
+code,pre{font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+code{background:var(--code);border-radius:4px;padding:1px 5px}
+pre{background:var(--code);border-radius:10px;padding:12px 14px;overflow-x:auto;margin:8px 0}
+pre code{background:none;padding:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.card h3{margin:0 0 4px}
+.card p{margin:0 0 10px;color:var(--muted);font-size:14px}
+.dl{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--text);margin-top:6px}
+.dl:hover{border-color:var(--brand)}
+.dl b{color:var(--brand);font-weight:600}
+.dl span{color:var(--muted);font-size:13px;white-space:nowrap}
+.dl.off{opacity:.55;pointer-events:none}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-top:12px}
+.tabs button{font:inherit;background:none;border:0;border-bottom:3px solid transparent;padding:8px 12px;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--brand);border-color:var(--brand);font-weight:600}
+.panel{display:none}.panel.on{display:block}
+ol li,ul li{margin:4px 0}
+.note{border-left:4px solid var(--warn);background:var(--surface);padding:10px 14px;border-radius:0 10px 10px 0;margin:12px 0;font-size:15px}
+.note.ok{border-color:var(--ok)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+td,th{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.scroll{overflow-x:auto}
+footer{margin-top:48px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <img src="icon.png" alt="">
+  <div>
+    <h1>Sɛbɛni Studio <span class="tag">fuga</span></h1>
+    <p class="sub">Test build 0.3.0-fuga · 26 November 2026 · Windows, macOS, Ubuntu/Debian</p>
+  </div>
+</header>
+<p>Thank you for testing. This page has the downloads, how to install on each system, what to try, and how to report what you find. The app is in English or French (you choose at first launch) and works on languages of Mali, Bambara by default.</p>
+<p>See also: <a href="report/">the recorded full test of this build</a> (video, 57 automatic checks, screenshots).</p>
+
+<h2 id="download">Download</h2>
+<div class="cards">
+  <div class="card">
+    <h3>Windows 10 / 11</h3>
+    <p>64-bit (x64)</p>
+    <a class="dl" href="https://github.com/s7d11/kurukan/releases/download/fuga/SebeniStudio-fuga-win-x64.exe"><b>Installer (.exe)</b><span>251 MB</span></a>
+    <a class="dl" href="https://github.com/s7d11/kurukan/releases/download/fuga/SebeniStudio-fuga-win-x64.zip"><b>Portable (.zip)</b><span>308 MB</span></a>
+  </div>
+  <div class="card">
+    <h3>Ubuntu / Debian</h3>
+    <p>Ubuntu 22.04+ · Debian 12+ · 64-bit (x64)</p>
+    <a class="dl" href="https://github.com/s7d11/kurukan/releases/download/fuga/SebeniStudio-fuga-linux-amd64.deb"><b>Package (.deb)</b><span>380 MB</span></a>
+    <a class="dl" href="https://github.com/s7d11/kurukan/releases/download/fuga/SebeniStudio-fuga-linux-x86_64.AppImage"><b>AppImage</b><span>472 MB</span></a>
+  </div>
+  <div class="card">
+    <h3>macOS</h3>
+    <p>Apple Silicon (M1 or later) · macOS 12+</p>
+    <a class="dl off" href="#mac" id="mac-dl"><b>App (.zip)</b><span>coming soon</span></a>
+  </div>
+</div>
+<p class="sub" style="margin-top:10px">All files are on the <a href="https://github.com/s7d11/kurukan/releases/tag/fuga">fuga release page</a>, with <a href="https://github.com/s7d11/kurukan/releases/download/fuga/SHA256SUMS.txt">SHA256SUMS.txt</a> to check your download.</p>
+
+<h2 id="install">Install</h2>
+<div class="tabs" role="tablist">
+  <button role="tab" aria-selected="true" data-p="win">Windows</button>
+  <button role="tab" aria-selected="false" data-p="linux">Ubuntu / Debian</button>
+  <button role="tab" aria-selected="false" data-p="mac">macOS</button>
+</div>
+
+<section class="panel on" id="p-win" role="tabpanel">
+  <h3>Installer (recommended)</h3>
+  <ol>
+    <li>Download <code>SebeniStudio-fuga-win-x64.exe</code> and open it.</li>
+    <li>Windows may show <b>“Windows protected your PC”</b>, because test builds are not code-signed yet. Click <b>More info</b>, then <b>Run anyway</b>.</li>
+    <li>Choose “Only for me”, keep or change the install folder, and click <b>Install</b>. No administrator rights are needed.</li>
+    <li>Start <b>Sebeni Studio</b> from the Start menu or the desktop shortcut.</li>
+  </ol>
+  <h3>Portable (no install)</h3>
+  <ol>
+    <li>Download <code>SebeniStudio-fuga-win-x64.zip</code>, right-click it and choose <b>Extract All…</b>.</li>
+    <li>Open the extracted folder and double-click <code>SebeniStudio.exe</code>. Answer the SmartScreen prompt as above.</li>
+  </ol>
+  <h3>Remove</h3>
+  <p>Settings → Apps → Installed apps → <b>Sebeni Studio</b> → Uninstall. For the portable version, delete the folder. Your projects and settings stay (see <a href="#data">where data lives</a>).</p>
+</section>
+
+<section class="panel" id="p-linux" role="tabpanel">
+  <h3>.deb package (recommended)</h3>
+  <ol>
+    <li>Download <code>SebeniStudio-fuga-linux-amd64.deb</code>.</li>
+    <li>Open a terminal in your Downloads folder and run:
+      <pre><code>sudo apt install ./SebeniStudio-fuga-linux-amd64.deb</code></pre>
+      Keep the <code>./</code>: it tells apt to use the local file and fetch any missing libraries.</li>
+    <li>Start <b>Sebeni Studio</b> from the applications menu, or type <code>sebeni-studio</code> in a terminal.</li>
+  </ol>
+  <p>Remove: <code>sudo apt remove sebeni-studio</code></p>
+  <h3>AppImage (no install)</h3>
+  <ol>
+    <li>Download <code>SebeniStudio-fuga-linux-x86_64.AppImage</code>.</li>
+    <li>Make it executable and run it:
+      <pre><code>chmod +x SebeniStudio-fuga-linux-x86_64.AppImage
+./SebeniStudio-fuga-linux-x86_64.AppImage</code></pre></li>
+  </ol>
+  <div class="note"><b>If the AppImage doesn’t start:</b>
+    <ul>
+      <li>Ubuntu 22.04 needs FUSE 2: <code>sudo apt install libfuse2</code>. (On 24.04 the package is <code>libfuse2t64</code>.)</li>
+      <li>Ubuntu 24.04 may stop it with a “sandbox” error. Use the .deb package instead, which sets this up for you, or start it with <code>--no-sandbox</code>.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="panel" id="p-mac" role="tabpanel">
+  <div class="note" id="mac-pending"><b>The macOS build isn’t published yet.</b> These steps will apply when it is.</div>
+  <ol>
+    <li>Download <code>SebeniStudio-fuga-mac-arm64.zip</code> and double-click it to unzip.</li>
+    <li>Drag <b>Sebeni Studio</b> into your <b>Applications</b> folder.</li>
+    <li>The first time, <b>right-click</b> (or Control-click) the app and choose <b>Open</b>, then <b>Open</b> again. Test builds are not notarized by Apple, so a normal double-click is refused the first time.</li>
+    <li>On macOS 15 and later, if there is no Open button: try to open the app once, then go to System Settings → Privacy &amp; Security and click <b>Open Anyway</b>.</li>
+  </ol>
+  <div class="note"><b>If macOS says the app “is damaged”:</b> this is the download quarantine, not a broken file. In Terminal run:
+    <pre><code>xattr -cr "/Applications/Sebeni Studio.app"</code></pre>
+    and open it again.
+  </div>
+  <p>Intel Macs are not supported in this build. Remove: drag the app from Applications to the Bin.</p>
+</section>
+
+<h2 id="first">First launch</h2>
+<p>A short setup runs the first time. You can skip any step and run it again later in Settings → Interface.</p>
+<ol>
+  <li><b>Interface language:</b> English or French. This is the language of the menus, separate from the language you write in.</li>
+  <li><b>Languages:</b> the workspace language (Bambara by default) and the pivot language for glosses (French by default).</li>
+  <li><b>Keyboard:</b> try the key map. For example <code>e;</code> types <code>ɛ</code>, <code>o;</code> types <code>ɔ</code>, and <code>n;;</code> cycles to <code>ŋ</code>.</li>
+  <li><b>Sebeni model:</b> the language models from mlsftwrs. Most are private: paste the Hugging Face token you were given to see and download them. The default model downloads by itself once the token is set.</li>
+  <li><b>Keys:</b> an NVIDIA API key turns on the main model (Nemotron), which powers the Assistant, Jeliba stories and the project architect. Without it the app still works with the dictionary, key map and guide, and gives offline answers.</li>
+  <li><b>Theme:</b> light or dark.</li>
+</ol>
+<div class="note ok">Keys are stored encrypted by your system (Windows DPAPI, macOS Keychain, Linux Secret Service) and never leave the app except to call the service they belong to.</div>
+
+<h2 id="test">What to try</h2>
+<ul>
+  <li><b>Start a project</b> from one of the presets (Translate, Jeliba story and 3D world, Corpus annotation, Full studio) or describe it to the Architect.</li>
+  <li><b>Write</b> in a document: spelling suggestions, the key map, Alt+click a word to look it up, export to .docx and .md.</li>
+  <li><b>Panes:</b> drag tabs to the edges to split, drag dividers, close everything and use the Start page.</li>
+  <li><b>Dictionary:</b> look up words, add your own entries, open the word map.</li>
+  <li><b>Annotation:</b> accept, update and clear steps; rename and delete an annotation project.</li>
+  <li><b>Jeliba:</b> answer the story questions, press BEGIN, pick choices, then use stage commands such as <code>/move Sali to well</code> in the 3D stage.</li>
+  <li><b>Models:</b> the model library (the model chip in the status bar), download and use a model.</li>
+</ul>
+
+<h2 id="report">Reporting a problem</h2>
+<p>Send each issue to the test coordinator with:</p>
+<ul>
+  <li>your system (for example “Windows 11”, “Ubuntu 24.04”, “macOS 15 on M2”) and the build name <b>fuga</b>;</li>
+  <li>what you did, what you expected, and what happened;</li>
+  <li>a screenshot or short screen recording if you can.</li>
+</ul>
+
+<h2 id="data">Where your data lives</h2>
+<div class="scroll"><table>
+  <tr><th></th><th>Projects</th><th>Settings, models, keys</th></tr>
+  <tr><td>Windows</td><td><code>Documents\Sebeni\projects</code></td><td><code>%APPDATA%\Sebeni Studio</code></td></tr>
+  <tr><td>macOS</td><td><code>~/Documents/Sebeni/projects</code></td><td><code>~/Library/Application Support/Sebeni Studio</code></td></tr>
+  <tr><td>Linux</td><td><code>~/Documents/Sebeni/projects</code></td><td><code>~/.config/Sebeni Studio</code></td></tr>
+</table></div>
+<p>Uninstalling keeps these folders. Delete them for a completely fresh start.</p>
+
+<h2 id="verify">Check a download (optional)</h2>
+<p>Compare the result with the line for your file in <a href="https://github.com/s7d11/kurukan/releases/download/fuga/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+<pre><code># Windows (PowerShell)
+Get-FileHash .\SebeniStudio-fuga-win-x64.exe
+# macOS
+shasum -a 256 SebeniStudio-fuga-mac-arm64.zip
+# Linux
+sha256sum SebeniStudio-fuga-linux-amd64.deb</code></pre>
+
+<footer>Sɛbɛni Studio · test build fuga (0.3.0-fuga) · for invited testers</footer>
+</main>
+<script>
+const tabs = document.querySelectorAll('.tabs button');
+function show(p) {
+  tabs.forEach(b => b.setAttribute('aria-selected', String(b.dataset.p === p)));
+  document.querySelectorAll('.panel').forEach(s => s.classList.toggle('on', s.id === 'p-' + p));
+}
+tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.p)));
+// Open the tab for the visitor's system.
+const ua = navigator.userAgent;
+show(/Mac/.test(ua) ? 'mac' : /Linux|X11/.test(ua) && !/Android/.test(ua) ? 'linux' : 'win');
+document.getElementById('mac-dl').addEventListener('click', () => show('mac'));
+</script>
+</body>
+</html>
